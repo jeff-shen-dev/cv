@@ -5,10 +5,15 @@
 $main: #1a222c;
 $sec: #4B5664;
 $purple: #54516A;
+
+$primary:rgba(0,172,193,1);
+$secondary:rgba(84,58,183,1);
+$badge-primary:#5fc383;
+$badge-secondary:#68b0f1;
 $cut: 768px;
 
 #hero {
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  background: linear-gradient(60deg, $secondary 0%, $primary 100%);
   display: flex;
   vertical-align: bottom;
   min-height: 100vh;
@@ -27,10 +32,13 @@ $cut: 768px;
   h1 {
     font-size: 2.5rem;
     margin-top: 0.25em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
+  }
+
+  h1 span {
+    margin-bottom: 10px;
   }
 }
-
 
 .header {
   font-family: 'Montserrat', sans-serif;
@@ -61,19 +69,6 @@ $cut: 768px;
     margin-top: 10px;
     @media only screen and (min-width:$cut){
       font-size: 34px;
-    }
-  }
-}
-
-.header-links {
-  margin: 10px;
-  .link {
-    color: #FFF;
-    text-decoration: none;
-    font-size: 15px;
-    margin: 10px;
-    @media only screen and (min-width:768px){
-      font-size: 20px;
     }
   }
 }
@@ -125,7 +120,7 @@ $cut: 768px;
 .down {
   color: #FFF;
   position: absolute;
-  bottom: 25px;
+  bottom: 40px;
   width: 100%;
   margin: 0 auto;
   display: block;
@@ -181,16 +176,10 @@ body {
   font-family: 'Antic Slab', serif;
   font-weight: 400;
 }
-article, aside, figcaption, figure, footer, header, nav, section {
-  display: block;
-}
+
 h1, h2, h3, h4, stong {
   line-height: 1.25;
   color: #333;
-}
-
-h1 span {
-  margin-bottom: 0.25em;
 }
 
 h2 {
@@ -214,4 +203,73 @@ a img {
 }
 sup, sub {
   line-height: 0;
+}
+
+
+// #about
+#about {
+  padding-top:10px;
+  font-size: 120%;
+  
+  width: 90%;
+  margin: 0 auto;
+  max-width: 960px;
+  @media only screen and (min-width: $cut) {
+    width: 80%;
+  }
+  svg {
+    width: 60px !important;
+    height: auto;
+  }
+
+  .cv-item {
+    flex: 1 1 0;
+    flex-direction: row;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    margin-bottom: 3em;
+    padding-bottom: 3em;
+
+    .logo {
+      width:30px;
+      vertical-align: middle;
+    }
+
+    .icon-bar {
+      font-size: 30px;
+    }
+    .icon-bar-larger {
+      font-size: 50px;
+    }
+    // todo delete
+    .icon {
+      text-align: center;
+      color: #FFF;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      padding: 10px;
+      margin: 5px;
+    }
+    h2, h3 {
+      font-weight: 400;
+    }
+
+    .badge {
+      color: white;
+      font-size: 12px;
+      border-radius: 3px;
+      display: inline-block;
+      white-space: no-wrap;
+      margin-left: 14px;
+      padding: 5px 15px;
+      vertical-align: middle;
+    }
+    .badge-primary {
+      background: $badge-primary;
+    }
+    .badge-secondary {
+      background: $badge-secondary;
+    }
+  }
+
 }
