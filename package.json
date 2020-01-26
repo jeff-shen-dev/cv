@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open",
     "watch": "webpack --watch",
     "lint": "eslint \"**/*.ts\" -f eslint-formatter-friendly",
-    "build": "npm run clean && webpack --config ./webpack.config.js"
+    "build": "webpack --config ./webpack.config.js"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
