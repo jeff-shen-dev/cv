@@ -210,17 +210,14 @@ sup, sub {
     height: auto;
   }
 
+  .user-details {
+    margin-bottom: 2.5em
+  }
+
   .cv-item {
-    flex: 1 1 0;
-    flex-direction: row;
     border-bottom: 1px solid rgba(0,0,0,.15);
     margin-bottom: 3em;
     padding-bottom: 3em;
-
-    .logo {
-      width:30px;
-      vertical-align: middle;
-    }
 
     .icon-bar {
       font-size: 30px;
