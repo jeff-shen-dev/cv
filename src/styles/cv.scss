@@ -258,4 +258,12 @@ sup, sub {
     }
   }
 
+  // Wait for font awesome to load before showing
+  .header-icons {
+    display: none;
+  }
+
+  .fontawesome-i2svg-active .header-icons{
+    display: initial;
+  }
 }
