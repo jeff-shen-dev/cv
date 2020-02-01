@@ -3,7 +3,9 @@ import '@fortawesome/fontawesome-free/js/solid'
 import '@fortawesome/fontawesome-free/js/brands'
 import '../styles/cv.scss';
 
-document.getElementById('app');
+// Adjust view height according to the browser interface on mobile
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -15,4 +17,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
     });
 });
-

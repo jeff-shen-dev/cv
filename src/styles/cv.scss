@@ -15,7 +15,8 @@ $body-font: 'Poppins';
   background: linear-gradient(60deg, $secondary 0%, $primary 100%);
   display: flex;
   vertical-align: bottom;
-  min-height: 100vh;
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -151,7 +152,7 @@ $body-font: 'Poppins';
 .waves-container {
   width: 100%;
   position: absolute;
-  bottom: -3vh;
+  bottom: -2vh;
 }
 
 body {
